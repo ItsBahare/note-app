@@ -1,12 +1,18 @@
 import "./App.css";
-import Header from "./assets/components/Header";
-import NoteList from "./assets/components/NotesList";
+import AddNewNote from "./assets/components/AddNewNote";
 
 function App() {
   return (
     <>
-      <Header />
-      <NoteList />
+      <div className="container">
+        <div className="note-header">note header</div>
+        <div className="note-app">
+          <div className="add-new-note">
+            <AddNewNote />
+          </div>
+          <div className="note-container">notes</div>
+        </div>
+      </div>
     </>
   );
 }

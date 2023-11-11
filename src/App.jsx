@@ -15,6 +15,13 @@ function App() {
     setNote(deleteNote);
   };
 
+  const handleCompleted = (e) => {
+    const noteId = Number(e.target.value);
+    const newNotes = note.map((note) =>
+      note.id === noteId ? { ...note, completed: !note.completed } : note,
+    );
+    setNote(newNotes);
+  };
   return (
     <>
       <div className="container">
@@ -24,7 +31,11 @@ function App() {
             <AddNewNote handleNote={handleNote} />
           </div>
           <div className="note-container">
-            <NoteList note={note} handleDelete={handleDelete} />
+            <NoteList
+              note={note}
+              handleDelete={handleDelete}
+              handleCompleted={handleCompleted}
+            />
           </div>
         </div>
       </div>

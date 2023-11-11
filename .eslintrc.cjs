@@ -18,10 +18,11 @@ module.exports = {
     "prettier/prettier": [
       "error",
       {
-        "endOfLine": "auto"
+        "endOfLine": "auto",
       }
     ],
     "arrow-body-style": "off",
+    "react/prop-types": "off",
     "prefer-arrow-callback": "off",
     'react-refresh/only-export-components': [
       'warn',

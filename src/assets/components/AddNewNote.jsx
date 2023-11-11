@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-function AddNewNote() {
+// eslint-disable-next-line react/prop-types
+function AddNewNote({ handleNote }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
@@ -16,6 +17,7 @@ function AddNewNote() {
     };
     setTitle("");
     setDescription("");
+    handleNote(NewNote);
   };
 
   return (

@@ -47,10 +47,8 @@ function NoteItem({ note, handleDelete, handleCompleted }) {
           />
         </div>
         <p className="note-item__footer">
-          {new Date(note.createdAt).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
+          {new Date(note.createdAt).toLocaleDateString("fa-IR", {
+            dateStyle: "full",
           })}
         </p>
       </div>

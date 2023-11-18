@@ -1,20 +1,22 @@
+import Message from "./Message";
+
 function NoteStatus({ note }) {
   const AllNotes = note.length;
   const Uncompleted = note.filter((n) => n.completed).length;
   const Open = AllNotes - Uncompleted;
 
-  if (!AllNotes) return <h2>Set your note :)</h2>;
+  if (!AllNotes) return <Message>یادداشت خود را وارد کنید</Message>;
 
   return (
     <ul className="note-status">
       <li>
-        All Notes<span>{AllNotes}</span>
+        همه یادداشت ها<span>{AllNotes}</span>
       </li>
       <li>
-        Uncompleted<span>{Uncompleted}</span>
+        تکمیل نشده<span>{Uncompleted}</span>
       </li>
       <li>
-        Open<span>{Open}</span>
+        باز<span>{Open}</span>
       </li>
     </ul>
   );

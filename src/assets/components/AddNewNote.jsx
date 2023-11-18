@@ -21,24 +21,24 @@ function AddNewNote({ handleNote }) {
 
   return (
     <div>
-      <h2>Add New Note</h2>
+      <h3>اضافه کردن یادداشت</h3>
       <form className="note-form" onSubmit={handleFormSubmit}>
         <input
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           className="text-field"
-          placeholder="note title...."
+          placeholder="تیتر یادداشت"
         />
         <input
           type="text"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           className="text-field"
-          placeholder="note description..."
+          placeholder="توضیحات"
         />
         <button type="submit" className="btn btn--primary">
-          Add New Note
+          افزودن
         </button>
       </form>
     </div>

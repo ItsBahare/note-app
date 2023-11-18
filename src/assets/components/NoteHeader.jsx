@@ -1,11 +1,11 @@
 function NoteHeader({ note, sortBy, onSort }) {
   return (
     <div className="note-header">
-      <h1>My Notes ({note.length})</h1>
+      <h1>یادداشت های من ({note.length})</h1>
       <select value={sortBy} onChange={onSort}>
-        <option value="latest">Sort based on latest notes</option>
-        <option value="earliest">Sort based on earliest notes</option>
-        <option value="completed">Sort based on completed notes</option>
+        <option value="latest">آخرین یادداشت ها</option>
+        <option value="earliest">اولین یادداشت ها</option>
+        <option value="completed">یادداشت های تکمیل شده</option>
       </select>
     </div>
   );
